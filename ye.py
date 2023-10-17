@@ -58,6 +58,8 @@ class Personaje:
         grave = random.choice([True,False])
         if self.tamaño == "grande" or grave:
             self.tamaño = "pequeño"
+            if self.vidas <= 0:
+                print(f"{self.nombre_personaje} ha perdido todas las vidas.")
             print(f"{self.nombre_personaje} ha enfretado un incidente y se ha vuelto pequeño")
         else:
             self.tamaño(False)
